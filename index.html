@@ -16,11 +16,26 @@
             </tr>
         </thead>
         <tbody>
-            <!-- Table data will be inserted here -->
         </tbody>
     </table>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.6/js/jquery.dataTables.min.js"></script>
-    <script src="script.js"></script> <!-- Include your JavaScript file -->
+    <script>
+        $(document).ready(function() {
+            // Fetch data from data.json
+            $.getJSON('data.json', function(data) {
+                var table = $('#data-table').DataTable({
+                    data: data,
+                    columns: [
+                        { data: 'dag_id' },
+                        { data: 'runs' },
+                        { data: 'success' },
+                        { data: 'failures' },
+                        { data: 'duration_formatted' }
+                    ]
+                });
+            });
+        });
+    </script>
 </body>
 </html>
