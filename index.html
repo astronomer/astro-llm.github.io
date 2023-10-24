@@ -23,18 +23,20 @@
     <script>
         $(document).ready(function() {
             // Fetch data from data.json
-            $.getJSON('data.json', function(data) {
-                var table = $('#data-table').DataTable({
-                    data: data,
-                    columns: [
-                        { data: 'dag_id' },
-                        { data: 'runs' },
-                        { data: 'success' },
-                        { data: 'failures' },
-                        { data: 'duration_formatted' }
-                    ]
+            fetch('data.json')
+                .then(response => response.json())
+                .then(data => {
+                    var table = $('#data-table').DataTable({
+                        data: data,
+                        columns: [
+                            { data: 'dag_id' },
+                            { data: 'runs' },
+                            { data: 'success' },
+                            { data: 'failures' },
+                            { data: 'duration_formatted' }
+                        ]
+                    });
                 });
-            });
         });
     </script>
 </body>
