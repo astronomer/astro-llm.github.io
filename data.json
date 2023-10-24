@@ -1,0 +1,23 @@
+[
+  {
+    "dag_id": "example_dag_1",
+    "runs": 20,
+    "success": 15,
+    "failures": 5,
+    "duration_formatted": "03:12:45"
+  },
+  {
+    "dag_id": "example_dag_2",
+    "runs": 15,
+    "success": 10,
+    "failures": 5,
+    "duration_formatted": "02:45:30"
+  },
+  {
+    "dag_id": "example_dag_3",
+    "runs": 25,
+    "success": 20,
+    "failures": 5,
+    "duration_formatted": "04:20:15"
+  }
+]

@@ -1,10 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <title>Data Table</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.6/css/jquery.dataTables.min.css">
 </head>
 <body>
-$END$
+    <table id="data-table" class="display">
+        <thead>
+            <tr>
+                <th>dag_id</th>
+                <th>runs</th>
+                <th>success</th>
+                <th>failures</th>
+                <th>duration_formatted</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table data will be inserted here -->
+        </tbody>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.6/js/jquery.dataTables.min.js"></script>
+    <script src="script.js"></script> <!-- Include your JavaScript file -->
 </body>
 </html>
